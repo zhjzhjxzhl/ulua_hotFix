@@ -1,0 +1,5 @@
+function TestChangeMethod_aa(self,i,a,b)
+	print("ok")
+	a.name = "ccc";
+	return a;
+end
