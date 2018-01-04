@@ -4,6 +4,7 @@ add hotfix to ulua
 原理和xlua是一样的，直接在编译之后，在标记为hotfix的类的方法调用出插入lua修复调用。对于数值型返回，没有做类型支持，需要用数值型的，可以进一步自己处理。因为lua只有double类型，而c#的类型转换有box和ubox过程。传个类型过去做个转换也容易处理的。
 闲话不说了，直接上代码。
 标记类：
+
 [AttributeUsage(AttributeTargets.Class,AllowMultiple=false,Inherited=false)]
 class HotFixAttribute : System.Attribute
 {
@@ -17,6 +18,7 @@ class HotFixAttribute : System.Attribute
         return desc;
     }
 }
+
 方法模板类：如果要扩充类型，就这里扩充就好了。
 using UnityEngine;
 using System.Collections;
