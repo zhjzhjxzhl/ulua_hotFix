@@ -5,6 +5,7 @@ add hotfix to ulua
 闲话不说了，直接上代码。
 标记类：
 
+//////////定义一个属性
 [AttributeUsage(AttributeTargets.Class,AllowMultiple=false,Inherited=false)]
 class HotFixAttribute : System.Attribute
 {
